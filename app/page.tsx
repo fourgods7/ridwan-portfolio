@@ -15,7 +15,8 @@ const projects = [
       "A React shopping website with a product listing page, product detail routes, and shared navigation and footer components.",
     technologies: ["React", "Vite", "React Router"],
     githubUrl: "https://github.com/fourgods7/E-commerce-shopper",
-    demoUrl: null,
+    demoUrl: "https://e-commerce-shopper-umber.vercel.app/",
+    imageUrl: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://e-commerce-shopper-umber.vercel.app/",
     visual: "E-COMMERCE",
   },
   {
