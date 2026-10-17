@@ -1,21 +1,30 @@
 const projects = [
   {
-    title: "Dashboard System",
+    title: "Gymme — Fitness Website",
     description:
-      "A modern dashboard featuring data visualization and interactive components.",
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+      "A fitness landing page built with React and Vite, featuring workout information, pricing, community content, FAQs, and calls to action.",
+    technologies: ["React", "Vite", "Tailwind CSS", "AOS"],
+    githubUrl: "https://github.com/fourgods7/Gymme",
+    demoUrl: null,
+    visual: "FITNESS",
   },
   {
-    title: "Foodie",
+    title: "E-commerce Shopper",
     description:
-      "A clean and responsive food website with an engaging user experience.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+      "A React shopping website with a product listing page, product detail routes, and shared navigation and footer components.",
+    technologies: ["React", "Vite", "React Router"],
+    githubUrl: "https://github.com/fourgods7/E-commerce-shopper",
+    demoUrl: null,
+    visual: "E-COMMERCE",
   },
   {
-    title: "E-Commerce Store",
+    title: "UI/UX Website",
     description:
-      "An online shopping platform designed for a seamless shopping experience.",
-    technologies: ["Next.js", "Node.js", "Database"],
+      "A polished business and fintech-style landing page with navigation, hero content, stats, billing sections, testimonials, and calls to action.",
+    technologies: ["React", "Vite", "Tailwind CSS"],
+    githubUrl: "https://github.com/fourgods7/ui-ux_website",
+    demoUrl: null,
+    visual: "UI / UX",
   },
 ];
 
@@ -103,17 +112,20 @@ export default function Home() {
         </div>
 
         <div className="mt-12 flex gap-5 text-sm text-gray-400">
-         
-<a
-  href="https://github.com/fourgods7"
-  target="_blank"
-  rel="noreferrer"
-  className="hover:text-blue-400"
->
-  GitHub ↗
-</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"
-            className="hover:text-blue-400">
+          <a
+            href="https://github.com/fourgods7"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-blue-400"
+          >
+            GitHub ↗
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-blue-400"
+          >
             LinkedIn ↗
           </a>
         </div>
@@ -166,8 +178,9 @@ export default function Home() {
             Featured Projects
           </h2>
 
-          <p className="mt-4 text-gray-400">
-            A selection of projects showcasing my development skills.
+          <p className="mt-4 max-w-2xl text-gray-400">
+            A selection of projects I'm building and refining. Open the source
+            code on GitHub, or check back as live demos are published.
           </p>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -176,9 +189,9 @@ export default function Home() {
                 key={project.title}
                 className="rounded-xl border border-gray-800 bg-[#111111] p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-500"
               >
-                <div className="mb-6 flex h-36 items-center justify-center rounded-lg bg-gradient-to-br from-blue-950 to-gray-900">
-                  <span className="text-4xl text-blue-400">
-                    {"</>"}
+                <div className="mb-6 flex h-36 items-center justify-center rounded-lg border border-blue-900/40 bg-gradient-to-br from-blue-950 via-[#111827] to-gray-900">
+                  <span className="text-sm font-semibold tracking-[0.3em] text-blue-300">
+                    {project.visual}
                   </span>
                 </div>
 
@@ -201,10 +214,29 @@ export default function Home() {
                   ))}
                 </div>
 
-                <div className="mt-6 border-t border-gray-800 pt-4">
-                  <span className="text-sm text-gray-500">
-                    Live Demo · GitHub
-                  </span>
+                <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-gray-800 pt-4">
+                  {project.demoUrl ? (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium transition hover:bg-blue-700"
+                    >
+                      Live Demo ↗
+                    </a>
+                  ) : (
+                    <span className="rounded-lg border border-gray-700 px-4 py-2 text-sm text-gray-500">
+                      Demo coming soon
+                    </span>
+                  )}
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg border border-gray-700 px-4 py-2 text-sm font-medium transition hover:border-blue-500 hover:text-blue-400"
+                  >
+                    View Code ↗
+                  </a>
                 </div>
               </article>
             ))}
@@ -293,7 +325,6 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-gray-800 px-6 py-8 text-center text-sm text-gray-500">
         © 2026 Olaniyan Ridwan. All rights reserved.
-        
       </footer>
     </main>
   );
