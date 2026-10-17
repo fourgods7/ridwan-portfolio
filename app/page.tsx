@@ -1,3 +1,5 @@
+import ContactForm from "./components/ContactForm";
+
 const projects = [
   {
     title: "TheGymme — Fitness Website",
@@ -326,12 +328,7 @@ export default function Home() {
             I'd love to hear from you.
           </p>
 
-          <a
-            href="mailto:your-email@example.com"
-            className="mt-8 inline-block rounded-lg bg-blue-600 px-6 py-3 font-medium transition hover:bg-blue-700"
-          >
-            Send Me an Email →
-          </a>
+          <ContactForm />
         </div>
       </section>
 
