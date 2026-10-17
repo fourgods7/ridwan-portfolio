@@ -1,12 +1,12 @@
 const projects = [
   {
-    title: "Gymme — Fitness Website",
+    title: "TheGymme — Fitness Website",
     description:
-      "A fitness landing page built with React and Vite, featuring workout information, pricing, community content, FAQs, and calls to action.",
-    technologies: ["React", "Vite", "Tailwind CSS", "AOS"],
-    githubUrl: "https://github.com/fourgods7/Gymme",
-    demoUrl: null,
-    visual: "FITNESS",
+      "A responsive fitness website featuring workout information, pricing, community content, FAQs, and calls to action.",
+    technologies: ["React", "Vite", "Tailwind CSS", "AOS", "Swiper"],
+    githubUrl: "https://github.com/fourgods7/TheGymme",
+    demoUrl: "https://the-gymme.vercel.app/",
+    visual: "THEGYMME",
   },
   {
     title: "E-commerce Shopper",
@@ -179,8 +179,8 @@ export default function Home() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-gray-400">
-            A selection of projects I'm building and refining. Open the source
-            code on GitHub, or check back as live demos are published.
+            A selection of projects I'm building and refining. Explore the source
+            code on GitHub or launch a live demo.
           </p>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
