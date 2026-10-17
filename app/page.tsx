@@ -6,6 +6,7 @@ const projects = [
     technologies: ["React", "Vite", "Tailwind CSS", "AOS", "Swiper"],
     githubUrl: "https://github.com/fourgods7/TheGymme",
     demoUrl: "https://the-gymme.vercel.app/",
+    imageUrl: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://the-gymme.vercel.app/",
     visual: "THEGYMME",
   },
   {
@@ -189,10 +190,21 @@ export default function Home() {
                 key={project.title}
                 className="rounded-xl border border-gray-800 bg-[#111111] p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-500"
               >
-                <div className="mb-6 flex h-36 items-center justify-center rounded-lg border border-blue-900/40 bg-gradient-to-br from-blue-950 via-[#111827] to-gray-900">
-                  <span className="text-sm font-semibold tracking-[0.3em] text-blue-300">
-                    {project.visual}
-                  </span>
+                <div className="mb-6 h-44 overflow-hidden rounded-lg border border-gray-800 bg-gray-900">
+                  {project.imageUrl ? (
+                    <img
+                      src={project.imageUrl}
+                      alt={`${project.title} homepage preview`}
+                      className="h-full w-full object-cover object-top transition duration-500 hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-950 via-[#111827] to-gray-900">
+                      <span className="text-sm font-semibold tracking-[0.3em] text-blue-300">
+                        {project.visual}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 <h3 className="text-xl font-semibold">
